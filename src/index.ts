@@ -16,7 +16,7 @@ app.get("/:slug", async (req, res) => {
   if (!req.params.slug) return res.send(html(error(`Failed to locate url`)));
   const z = req.params.slug.toLowerCase().split(" ").join("-");
   const url = await links.findOne({
-    link: `${z}`,
+    slug: `${z}`,
   });
   if (!url)
     return res.send(
