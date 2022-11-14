@@ -92,7 +92,7 @@ app.post("/create", async (req, res) => {
       ok: true,
       message: `Link generated you can find it here <a href="https://miuki.sh/${z}">here</a>`,
       url: `https://miuki.sh/${z}`,
-    })
+    }, raw)
   );
 });
 
